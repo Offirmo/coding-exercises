@@ -1,0 +1,37 @@
+{
+  "name": "coding-exercises-hr",
+  "version": "0.0.1",
+  "description": "Some coding exercises offered by a site I won't name to prevent googling ^^",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Offirmo/coding-exercises-hr.git"
+  },
+  "dependencies": {
+    "@offirmo/cli-toolbox": "^0.3.0",
+    "bignumber.js": "^4.0.0",
+    "hackerrank": "^0.1.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "nodemon": "^1.11.0",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "get": "hackerrank start javascript",
+    "start": "nodemon --exec ./run_current.bash",
+    "s0": "nodemon --exec ./run_current.bash 00",
+    "s1": "nodemon --exec ./run_current.bash 01",
+    "s2": "nodemon --exec ./run_current.bash 02",
+    "s3": "nodemon --exec ./run_current.bash 03",
+    "s4": "nodemon --exec ./run_current.bash 04",
+    "s5": "nodemon --exec ./run_current.bash 05",
+    "s6": "nodemon --exec ./run_current.bash 06",
+    "s7": "nodemon --exec ./run_current.bash 07",
+    "s8": "nodemon --exec ./run_current.bash 08",
+    "s9": "nodemon --exec ./run_current.bash 09",
+    "s10": "nodemon --exec ./run_current.bash 10",
+    "s13": "nodemon --exec ./run_current.bash 13",
+    "s13b": "nodemon --exec ./run_current.bash 13b"
+  }
+}

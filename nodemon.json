@@ -1,0 +1,18 @@
+{
+    "ignore": [
+        ".git",
+        "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "execMap": {
+    },
+    "events": {
+    },
+    "watch": [
+        "domains/"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js txt"
+}

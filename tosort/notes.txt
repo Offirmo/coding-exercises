@@ -1,0 +1,8 @@
+
+first_line=`head -n 1 "$exec"`
+
+if [[ "$first_line" != "#!/usr/bin/env node" ]]; then
+    echo "preparing the file..."
+    echo -e "#!/usr/bin/env node\n'use strict';\n\n$(cat $exec)" > "$exec"
+    chmod +x "$exec"
+fi
