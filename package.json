@@ -31,7 +31,15 @@
     "s8": "nodemon --exec ./run_current.bash 08",
     "s9": "nodemon --exec ./run_current.bash 09",
     "s10": "nodemon --exec ./run_current.bash 10",
+    "s11": "nodemon --exec ./run_current.bash 11",
+    "s12": "nodemon --exec ./run_current.bash 12",
     "s13": "nodemon --exec ./run_current.bash 13",
-    "s13b": "nodemon --exec ./run_current.bash 13b"
+    "s13b": "nodemon --exec ./run_current.bash 13b",
+    "s14": "nodemon --exec ./run_current.bash 14",
+    "s15": "nodemon --exec ./run_current.bash 15",
+    "s91": "nodemon --exec ./run_current.bash 91",
+    "s92": "nodemon --exec ./run_current.bash 92",
+    "s93": "nodemon --exec ./run_current.bash 93",
+    "s94": "nodemon --exec ./run_current.bash 94"
   }
 }

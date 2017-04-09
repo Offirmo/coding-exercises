@@ -1,15 +1,15 @@
 {
-    "ignore": [
-        ".git",
-        "node_modules/**/node_modules"
-    ],
     "verbose": true,
+    "ignore": [
+        "tosort"
+    ],
     "execMap": {
     },
     "events": {
     },
     "watch": [
-        "domains/"
+        "domains/",
+        "manual1/"
     ],
     "env": {
         "NODE_ENV": "development"

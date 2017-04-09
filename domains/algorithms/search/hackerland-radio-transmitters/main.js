@@ -28,12 +28,8 @@ function main() {
     var n = parseInt(n_temp[0]);
     var k = parseInt(n_temp[1]);
     var x = readLine().split(' ');
-/*
-    var k = 2
-    var x = [ 2, 4, 5, 6, 7, 9, 11, 12 ]*/
 
     const sorted_house_positions = Uint32Array.from(x).sort()
-    //console.log(sorted_house_positions)
 
     const range = k
     let house_count = sorted_house_positions.length
@@ -54,7 +50,7 @@ function main() {
         while (true) {
             const next_neighbour_index = furthest_house_that_can_cover_me_so_far_index + 1
             if (next_neighbour_index >= house_count) {
-                // no more houses
+                // no more houses after this one
                 break
             }
             const next_neighbour_position = sorted_house_positions[next_neighbour_index]
@@ -65,7 +61,7 @@ function main() {
             furthest_house_that_can_cover_me_so_far_index = next_neighbour_index
         }
         // ok, let's plant a transmitter and take into account its coverage
-        console.log('planting a transmitter on', sorted_house_positions[furthest_house_that_can_cover_me_so_far_index])
+        //console.log('planting a transmitter on', sorted_house_positions[furthest_house_that_can_cover_me_so_far_index])
         transmitter_count++
         furthest_covered_position = sorted_house_positions[furthest_house_that_can_cover_me_so_far_index] + range
     } while(current_house_index < house_count - 1)
