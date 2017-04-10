@@ -3,45 +3,57 @@
 
 const _ = require('lodash')
 
-function processData(input) {
-    const [ l1, l2 ] = input.trim().split('\n')
-    const numbers = l2.split(' ')
-
-    const u16in = Uint16Array.from(numbers)
-
-    const last_index = u16in.length - 1
-    const num_to_insert = u16in[last_index]
-    const u16temp = u16in.slice(0)
-    let inserted = false
-    for(let i = last_index - 1; i >= 0 && !inserted; --i) {
-        if (u16temp[i] > num_to_insert)
-            u16temp[i+1] = u16temp[i]
-        else {
-            if (u16temp[i+1] === num_to_insert) return // nothing to do
-            u16temp[i+1] = num_to_insert
-            inserted = true
-        }
-        console.log(u16temp.toString().replace(/,/g, ' '))
-    }
-    if (u16temp[0] > num_to_insert) {
-        u16temp[0] = num_to_insert
-        console.log(u16temp.toString().replace(/,/g, ' '))
-    }
-}
-/*
-processData(`
-5
-2 4 6 8 3
-`)
-process.exit(1)*/
-
 process.stdin.resume();
-process.stdin.setEncoding("ascii");
-var _input = "";
-process.stdin.on("data", function (input) {
-    _input += input;
+process.stdin.setEncoding('ascii');
+
+var __input_stdin = "";
+var __input_stdin_array = "";
+var __input_currentline = 0;
+
+process.stdin.on('data', function (data) {
+    __input_stdin += data;
 });
 
-process.stdin.on("end", function () {
-   processData(_input);
+
+
+////////////////
+
+/*
+ * Complete the function below.
+ */
+function compute(n) {
+    let res = ''
+    let digits = '0atlsin'
+    let BASE = 7
+
+    do {
+        let digit = n % BASE
+        res = digits[digit] + res
+        n = Math.trunc((n - digit) / BASE)
+    } while(n > 0)
+
+    return res
+}
+console.log(compute(0))
+console.log(compute(7))
+console.log(compute(8))
+console.log(compute(7792875))
+
+/////////////////
+
+
+
+var fs = require('fs');
+//var wstream = fs.createWriteStream(process.env.OUTPUT_PATH);
+process.stdin.on('end', function () {
+    __input_stdin_array = __input_stdin.split("\n");
+    var res;
+    var _instructions = __input_stdin_array[__input_currentline].trim();
+    __input_currentline += 1;
+
+    res = compute(_instructions);
+    console.log(res+"\n");
+
+    //wstream.end();
 });
+
